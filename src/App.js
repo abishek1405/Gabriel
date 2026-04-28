@@ -350,7 +350,7 @@ export default function Portfolio() {
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             }}>J. Gabriel<br />Prabakaran</h1>
             <p style={{ fontSize: "1.1rem", color: "#06b6d4", fontWeight: 600, marginBottom: "1.25rem" }}>
-              Ph.D. | Executive Manager & IT Professional
+              Ph.D. | Executive Manager & Administration
             </p>
             <p className="hero-desc" style={{ fontSize: "0.95rem", lineHeight: 1.75, color: d ? "#94a3b8" : "#64748b", maxWidth: 480, marginBottom: "2rem" }}>
               Accomplished professional with a Ph.D. in Business Administration and a strong track record in executive management and IT operations. Passionate about bridging technology and organisational excellence.

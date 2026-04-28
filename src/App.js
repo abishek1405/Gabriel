@@ -69,7 +69,7 @@ function Loader({ onDone }) {
       }
     }, 40);
     return () => clearInterval(id);
-  }, []);
+  }, [onDone]);
 
   return (
     <div style={{

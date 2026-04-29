@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import loaderimg from "./loaderimg.png";
+import { FaDownload } from "react-icons/fa6";
+import Resume from "./Dr_GABRIEL_PRABAKARAN.pdf";
+
 
 
 const skills = [
@@ -344,11 +347,26 @@ export default function Portfolio() {
             <p style={{ fontSize: "0.85rem", letterSpacing: 3, textTransform: "uppercase", color: "#6366f1", fontWeight: 700, marginBottom: "0.75rem" }}>
               Welcome to my portfolio
             </p>
-            <h1 className="hero-name" style={{
-              fontSize: "clamp(2.4rem,5vw,4rem)", fontWeight: 800, lineHeight: 1.1, marginBottom: "0.5rem",
-              background: d ? "linear-gradient(135deg,#e2e8f0 30%,#6366f1)" : "linear-gradient(135deg,#1e293b 30%,#6366f1)",
-              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-            }}>J. Gabriel<br />Prabakaran</h1>
+            <h1
+              key={d ? "dark" : "light"}
+              className="hero-name"
+              style={{
+                fontSize: "clamp(2.4rem,5vw,4rem)",
+                fontWeight: 800,
+                lineHeight: 1.1,
+                marginBottom: "0.5rem",
+                background: d
+                  ? "linear-gradient(135deg,#e2e8f0 30%,#6366f1)"
+                  : "linear-gradient(135deg,#1e293b 30%,#6366f1)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                color: "transparent",
+                display: "inline-block",
+              }}
+            >
+              J. Gabriel<br />Prabakaran
+            </h1>
             <p style={{ fontSize: "1.1rem", color: "#06b6d4", fontWeight: 600, marginBottom: "1.25rem" }}>
               Ph.D. | Executive Manager & Administration
             </p>
@@ -361,12 +379,26 @@ export default function Portfolio() {
                 color: "#fff", border: "none", borderRadius: 30, fontSize: "0.92rem", fontWeight: 600,
                 cursor: "pointer", transition: "all 0.2s", boxShadow: "0 4px 20px rgba(99,102,241,0.4)",
               }}>Get In Touch</button>
-              <button className="btn-outline" onClick={() => scrollTo("Experience")} style={{
-                padding: "0.7rem 1.7rem", background: "transparent",
-                color: d ? "#e2e8f0" : "#1e293b",
-                border: d ? "1.5px solid rgba(99,102,241,0.45)" : "1.5px solid rgba(99,102,241,0.4)",
-                borderRadius: 30, fontSize: "0.92rem", fontWeight: 600, cursor: "pointer", transition: "all 0.2s",
-              }}>View Experience</button>
+             <a href={Resume} download>
+              <button
+                className="btn-outline"
+                style={{
+                  padding: "0.7rem 1.7rem",
+                  background: "transparent",
+                  color: d ? "#e2e8f0" : "#1e293b",
+                  border: d
+                    ? "1.5px solid rgba(99,102,241,0.45)"
+                    : "1.5px solid rgba(99,102,241,0.4)",
+                  borderRadius: 30,
+                  fontSize: "0.92rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  transition: "all 0.2s",
+                }}
+              >
+                <FaDownload /> Resume
+              </button>
+            </a>
             </div>
             <div className="hero-stats" style={{ display: "flex", gap: "2rem", marginTop: "2.5rem", flexWrap: "wrap" }}>
               {[["2+","Years Experience"],["Ph.D.","Business Admin"],["2","Companies"]].map(([val,lbl]) => (
